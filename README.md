@@ -1,5 +1,3 @@
-# music-recommender-checkpoint1
-
 # 🎵 **Checkpoint 1 – Baseline Music Recommender**
 
 This checkpoint focuses on preparing the dataset and building a simple baseline recommendation system for the **Interactive Mood-Based Music Recommender** project.
@@ -11,7 +9,7 @@ This checkpoint focuses on preparing the dataset and building a simple baseline 
 In this checkpoint, we prepared the Spotify dataset, explored its features, and built a **baseline model** using cosine similarity.
 This model recommends similar songs based on their audio characteristics.
 
----
+
 
 ## ✅ **2. Work Completed**
 
@@ -49,7 +47,7 @@ This model recommends similar songs based on their audio characteristics.
   * Returns a list of similar tracks
 * Successfully tested the baseline recommender
 
----
+
 
 ## ✅ **3. Challenges & Solutions**
 
@@ -65,5 +63,4 @@ Some columns were non-numeric (track name, artist, genre).
 **Solution:**
 Selected only numeric columns for scaling and similarity.
 
----
 
