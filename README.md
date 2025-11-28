@@ -1,32 +1,69 @@
 # music-recommender-checkpoint1
-Interactive Mood-Based Music Recommender – Checkpoint 1
 
-For this checkpoint, we focused on preparing the dataset and building a baseline music recommendation model.
+# 🎵 **Checkpoint 1 – Baseline Music Recommender**
 
-What we did
+This checkpoint focuses on preparing the dataset and building a simple baseline recommendation system for the **Interactive Mood-Based Music Recommender** project.
 
-Loaded the Spotify dataset
+---
 
-Reduced it to the first 10,000 songs
+## ✅ **1. Overview**
 
-Cleaned the data
+In this checkpoint, we prepared the Spotify dataset, explored its features, and built a **baseline model** using cosine similarity.
+This model recommends similar songs based on their audio characteristics.
 
-Performed basic EDA (histograms + heatmap)
+---
 
-Scaled numeric features
+## ✅ **2. Work Completed**
 
-Computed cosine similarity
+### **✔ Data Loading**
 
-Built a simple recommend() function
+* Loaded the Spotify dataset from Kaggle
+* Reduced the dataset to **10,000 tracks** to avoid memory issues
+* Previewed the data using `df.head()` and `df.shape`
 
-Baseline Model
+### **✔ Data Cleaning**
 
-The baseline model uses content-based filtering with cosine similarity to recommend similar songs based on audio features.
+* Selected only **numeric audio features** (energy, valence, tempo, danceability, etc.)
+* Removed unnecessary columns
+* Ensured the data was ready for numerical operations
 
-Next Steps
+### **✔ Exploratory Data Analysis (EDA)**
 
-Add mood-based commands
+* Created histograms for:
 
-Build the interactive chat UI
+  * **Energy**
+  * **Valence**
+* Generated a **correlation heatmap** to inspect relationships between audio features
 
-Improve recommendations
+### **✔ Data Scaling**
+
+* Applied `StandardScaler` to normalize audio features
+* Scaling ensures all features have equal importance when computing similarity
+
+### **✔ Baseline Recommendation Model**
+
+* Computed a **cosine similarity matrix** for 10,000 songs
+* Implemented a `recommend()` function that:
+
+  * Takes a song name as input
+  * Returns a list of similar tracks
+* Successfully tested the baseline recommender
+
+---
+
+## ✅ **3. Challenges & Solutions**
+
+### **⚠️ Large Dataset → Memory Error**
+
+The original dataset (232k songs) caused memory issues when computing similarity.
+**Solution:**
+Reduced the dataset to 10,000 rows.
+
+### **⚠️ String Columns Causing Errors**
+
+Some columns were non-numeric (track name, artist, genre).
+**Solution:**
+Selected only numeric columns for scaling and similarity.
+
+---
+
